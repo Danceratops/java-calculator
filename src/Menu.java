@@ -24,7 +24,7 @@ public class Menu {
         return choice;
     }
 
-    public static float getOperands(String modulusCheck) {
+    public static float getOperands() {
         Scanner input = new Scanner(System.in);
         float choice;
 
