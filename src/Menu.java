@@ -11,15 +11,25 @@ public class Menu {
         System.out.println("Division: /");
         System.out.println("Remainder: %");
         System.out.println("Quit: q");
-        System.out.println("Please enter an operation: ");
     }
 
     public static String getOperation() {
         Scanner input = new Scanner(System.in);
         String choice;
         do {
+            System.out.println("Please enter an operation: ");
             choice = input.nextLine();
-        } while(Pattern.matches(".[-+*/%q]", choice));
+        } while(!Pattern.matches("[-+*/%q]", choice));
+
+        return choice;
+    }
+
+    public static float getOperands(String modulusCheck) {
+        Scanner input = new Scanner(System.in);
+        float choice;
+
+        System.out.println("Please enter a float: ");
+        choice = input.nextFloat();
 
         return choice;
     }
